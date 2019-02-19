@@ -25,12 +25,13 @@
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <i class="fas fa-fw fa-book"></i>
-            <span>Kuliah</span>
+            <span>Perkuliahan</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="<?php echo site_url('admin/pemasukan/tampil_pemasukan') ?>">Data Pemasukan</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/pengeluaran/tampil_pengeluaran') ?>">Data Pengeluaran</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/keuangan/laporan') ?>">Laporan Keuangan</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/matakuliah') ?>">Data Mata kuliah</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/praktikum') ?>">Data praktikum</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/tugas') ?>">Data tugas</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/keuangan/laporan') ?>">Jadwal</a>
     
         </div>
     </li>
