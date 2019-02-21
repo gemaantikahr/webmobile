@@ -29,40 +29,27 @@
 						<a href="<?php echo site_url('admin/buku1/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
                     </div>
 					<div class="card-body">
-						<form action="<?php echo base_url().'admin/perkuliahan/praktikum/insert_praktikum'?>" method="post" enctype="multipart/form-data" >                            
-                            <div class="form-group">
-								<label for="name">Nama Praktikum*</label>                                
-								<div class="form-group">
-                                        <select class="form-control" id="sel1" name="xnama">
-                                        <?php foreach($namaprak as $data):?>
-                                            <option value="Practice <?php echo $data->nama_matkul?>">Practice <?php echo $data->nama_matkul?></option> 
-                                        <?php endforeach?> 
-                                        </select>
-                                </div> 
-                            </div>
-							<div class="form-group">
-								<label for="name">Nama Asisten*</label>
-								<input class="form-control" type="text" name="xnamaasisten" placeholder="Asisten .."/>
+						<form action="<?php echo base_url().'admin/perkuliahan/tugas/insert_tugas'?>" method="post" enctype="multipart/form-data" >                            
+						<div class="form-group">
+								<label for="name">Nama Tugas*</label>
+								<input class="form-control" type="text" name="xnama" placeholder="Nama tugas.."/>
 							</div>
 							<div class="form-group">
-										<label for="name">Hari*</label>
-                                        <select class="form-control" id="sel1" name="xhari">
-                                        <?php foreach($hari as $data):?>
-                                            <option value="<?php echo $data->nama_hari?>"><?php echo $data->nama_hari?></option> 
-                                        <?php endforeach?> 
-                                        </select>
-                            </div>
-							<div class="form-group">
-								<label for="name">Jam mulai*</label>
-								<input class="form-control" type="time" name="xmulai" placeholder="Jam mulai.."/>
+								<label for="name">Deadline*</label>
+								<input class="form-control" type="date" name="xdeadline"/>
 							</div>
 							<div class="form-group">
-								<label for="name">Jam selesai*</label>
-								<input class="form-control" type="time" name="xselesai" placeholder="Jam selesai.." />
+								<div class="form-check-inline">
+										<label class="form-check-label"> Status* <br>
+										<input type="radio" class="form-check-input" name="xstatus" value="belum">Belum
+										<input type="radio" class="form-check-input" name="xstatus" value="sudah">Sudah
+										</label>
+								</div>
 							</div>
+
 							<div class="form-group">
-								<label for="name">Temmpat*</label>
-								<input class="form-control" type="text" name="xtempat" placeholder="Tempat.." />
+								<label for="name">Keterangan*</label>
+								<input class="form-control" type="text" name="xketerangan" placeholder="Keterangan.."/>
 							</div>
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>

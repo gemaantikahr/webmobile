@@ -29,8 +29,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/matakuliah') ?>">Data Mata kuliah</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/praktikum') ?>">Data praktikum</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/tugas') ?>">Data tugas</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/praktikum') ?>">Data Praktikum</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/tugas') ?>">Data Tugas</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/perkuliahan/kegiatan') ?>">Data Kegiatan</a>
             <a class="dropdown-item" href="<?php echo site_url('admin/keuangan/laporan') ?>">Jadwal</a>
     
         </div>

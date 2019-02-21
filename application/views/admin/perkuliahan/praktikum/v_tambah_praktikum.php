@@ -30,16 +30,10 @@
                     </div>
 					<div class="card-body">
 						<form action="<?php echo base_url().'admin/perkuliahan/praktikum/insert_praktikum'?>" method="post" enctype="multipart/form-data" >                            
-                            <div class="form-group">
-								<label for="name">Nama Praktikum*</label>                                
-								<div class="form-group">
-                                        <select class="form-control" id="sel1" name="xnama">
-                                        <?php foreach($namaprak as $data):?>
-                                            <option value="Practice <?php echo $data->nama_matkul?>">Practice <?php echo $data->nama_matkul?></option> 
-                                        <?php endforeach?> 
-                                        </select>
-                                </div> 
-                            </div>
+						<div class="form-group">
+								<label for="name">Nama Prak*</label>
+								<input class="form-control" type="text" name="xnama" placeholder="Praktikum.." />
+							</div>
 							<div class="form-group">
 								<label for="name">Nama Asisten*</label>
 								<input class="form-control" type="text" name="xnamaasisten" placeholder="Asisten .."/>

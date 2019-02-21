@@ -28,41 +28,32 @@
 					<div class="card-header">
 						<a href="<?php echo site_url('admin/buku1/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
                     </div>
-                    <?php foreach ($edittugas as $data): ?>
 					<div class="card-body">
-
-						<form action="<?php echo base_url().'admin/perkuliahan/tugas/update_tugas'?>" method="post" enctype="multipart/form-data" >
+						<form action="<?php echo base_url().'admin/perkuliahan/kegiatan/insert_kegiatan'?>" method="post" enctype="multipart/form-data" >                            
 							<div class="form-group">
-								<label for="name">Idtugas*</label>
-								<input class="form-control" type="text" name="xid" value="<?php echo $data->id_tugas?>" readonly/>
-                            </div>
-                            
-							<div class="form-group">
-								<label for="name">Nama Tugas*</label>
-								<input class="form-control" type="text" name="xnama" value="<?php echo $data->nama_tugas?>" />
+								<label for="name">Nama Kegiatan*</label>
+								<input class="form-control" type="text" name="xnama" placeholder="Nama Kegiatan.."/>
                             </div>
 							<div class="form-group">
-								<label for="name">Deadline*</label>
-								<input class="form-control" type="date" name="xdeadline" value="<?php echo $data->deadline?>" />
+								<label for="name">Tanggal*</label>
+								<input class="form-control" type="date" name="xtanggal" placeholder="Tanggal.."/>
                             </div>
                             <div class="form-group">
-                                <div class="form-check-inline">
-										<label class="form-check-label"> Status* <br>
-										<input type="radio" class="form-check-input" name="xstatus" value="belum">Belum
-										<input type="radio" class="form-check-input" name="xstatus" value="selesai">Selesai
-										</label>
-								</div>
+								<label for="name">Tempat*</label>
+								<input class="form-control" type="text" name="xtempat" placeholder="Tempat.."/>
 							</div>
                             <div class="form-group">
-								<label for="name">Keterangan*</label>
-								<input class="form-control" type="text" name="xketerangan" value="<?php echo $data->keterangan?>" />
+								<label for="name">Jam Mulai*</label>
+								<input class="form-control" type="time" name="xmulai" placeholder="Jam mulai.."/>
 							</div>
-
+							<div class="form-group">
+								<label for="name">Jam Selesai*</label>
+								<input class="form-control" type="time" name="xselesai" placeholder="Jam selesai.."/>
+							</div>
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>
 
 					</div>
-                    <?php endforeach; ?>
 					<div class="card-footer small text-muted">
 						* Isi Semua Data
 					</div>

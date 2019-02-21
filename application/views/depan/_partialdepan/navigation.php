@@ -10,9 +10,9 @@
             Perkuliahan
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Jadwal Kuliah</a>
-            <a class="dropdown-item" href="#">Jadwal Tugas</a>
-            <a class="dropdown-item" href="#">Jadwal Belajar</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/depan/perkuliahan/tampil_jadwal_kuliah')?>">Jadwal Kuliah</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/depan/perkuliahan/tampil_jadwal_tugas')?>">Jadwal Tugas</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/depan/perkuliahan/tampil_jadwal_kegiatan')?>">Jadwal Kegiatan</a>
           </div>
       </li>
       <li class="nav-item dropdown">
@@ -20,9 +20,8 @@
             Keuangan
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Transaksi Masuk</a>
-            <a class="dropdown-item" href="#">Transaksi Keluar</a>
-            <a class="dropdown-item" href="#">Laporan</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/pemasukan/tampil_pemasukan')?>">Transaksi Masuk</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/pengeluaran/tampil_pengeluaran')?>">Transaksi Keluar</a>
           </div>
       </li>
       <li class="nav-item">

@@ -9,7 +9,7 @@ class M_perkuliahan extends CI_Model{
     function tampil_jadwal(){
         $query=$this->db->query("SELECT tbl_matakuliah.nama_matkul, tbl_matakuliah.hari AS harikuliah, tbl_matakuliah.jam_mulai AS mulaikuliah, tbl_matakuliah.jam_selesai AS selesaikuliah, tbl_matakuliah.tempat AS tempatkuliah,
         tbl_praktikum.nama_praktikum, tbl_praktikum.hari AS haripraktikum, tbl_praktikum.jam_mulai AS mulaipraktikum, tbl_praktikum.jam_selesai AS selesaipraktikum, tbl_praktikum.tempat AS tempatpraktikum 
-        FROM tbl_matakuliah, tbl_praktikum");
+        FROM tbl_matakuliah, tbl_praktikum GROUP BY tbl_matakuliah.nama_matkul");
         return $query->result();
     }
 

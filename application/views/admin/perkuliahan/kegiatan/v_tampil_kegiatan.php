@@ -21,7 +21,7 @@
 				<!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-header">
-					<a href="<?php echo site_url('admin/perkuliahan/tugas/add_tugas') ?>"><i class="fas fa-plus"></i> Tambah Tugas</a>
+					<a href="<?php echo site_url('admin/perkuliahan/kegiatan/add_kegiatan') ?>"><i class="fas fa-plus"></i> Tambah Kegiatan</a>
 					</div>
 					<div class="card-body">
 
@@ -30,18 +30,19 @@
 								<thead>
                                 <tr>
 										<th>No*</th>
-										<th>Nama Tugas*</th>
-                                        <th>Deadline*</th>
-                                        <th>Status*</th>
-                                        <th>Keterangan*</th>
+										<th>Nama*</th>
+                                        <th>Jam mulai*</th>
+                                        <th>Jam Selesai*</th>
                                         <th>Tanggal</th>
+                                        <th>Tempat*</th>
+                                        <th>Status*</th>
                                         <th>Option*</th>
 									</tr>
 								</thead>
 								<tbody>
                                     <?php 
                                         $no=0;
-                                        foreach($tugas as $data):
+                                        foreach($kegiatan as $data):
                                         $no++;
                                     ?>
 									<tr>
@@ -49,24 +50,27 @@
                                             <?php echo $no?>
                                         </td>
 										<td>
-											<?php echo $data->nama_tugas?>
+											<?php echo $data->nama_kegiatan?>
+										</td>
+										<td>
+											<?php echo $data->jam_mulai?>
+										</td>
+										<td>
+                                            <?php echo $data->jam_selesai?>
 										</td>
                                         <td>
-                                            <?php echo $data->deadline?>
+                                            <?php echo $data->tanggal?>
                                         </td>
 										<td>
-                                             <?php echo $data->status_tugas?>
+                                             <?php echo $data->tempat?>
 										</td>
                                         <td>
-                                             <?php echo $data->keterangan?>
-										</td>
-                                        <td>
-                                             <?php echo $data->tanggal?>
-										</td>
+                                            <?php echo $data->status_kegiatan ?>
+                                        </td>
 										<td width="250">
-											<a href="<?php echo site_url('admin/perkuliahan/tugas/edit_tugas/'.$data->id_tugas) ?>"
+											<a href="<?php echo site_url('admin/perkuliahan/kegiatan/edit_kegiatan/'.$data->id_kegiatan) ?>"
 											 class="btn btn-small text-primary"><i class="fas fa-edit"></i></a>
-											<a data-toggle="modal" data-target="#ModalHapus<?php echo $data->id_tugas?>"
+											<a data-toggle="modal" data-target="#ModalHapus<?php echo $data->id_kegiatan?>"
 											class="btn btn-small text-danger"><i class="fas fa-trash"></i></a>
 										</td>
                                     </tr>
@@ -80,20 +84,20 @@
 			</div>
 
                 <!--Modal hapus pengeluaran-->
-		    <?php foreach ($tugas as $data):?>
-				<div class="modal fade" id="ModalHapus<?php echo $data->id_tugas;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		    <?php foreach ($kegiatan as $data):?>
+				<div class="modal fade" id="ModalHapus<?php echo $data->id_kegiatan;?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h4 class="modal-title" id="myModalLabel">Hapus Tugas</h4>
+								<h4 class="modal-title" id="myModalLabel">Hapus Kegiatan</h4>
 							</div>
-							<form class="form-horizontal" action="<?php echo base_url().'admin/perkuliahan/tugas/delete_tugas'?>" method="post" enctype="multipart/form-data">
+							<form class="form-horizontal" action="<?php echo base_url().'admin/perkuliahan/kegiatan/delete_kegiatan'?>" method="post" enctype="multipart/form-data">
 							<div class="modal-body">
 									<div class="form-group">
 										<p for="inputUserask" class="col-sm-12 control-label">Apakah anda ingin menghapus</p>
-										<strong><label for="inputUserName" class="col-sm-12 control-label"> <?php echo $data->nama_tugas?></label></strong>
+										<strong><label for="inputUserName" class="col-sm-12 control-label"> <?php echo $data->nama_kegiatan?></label></strong>
 										<div class="col-sm-7">
-										<input type="hidden" name="xid" value="<?php echo $data->id_tugas;?>">
+										<input type="hidden" name="xid" value="<?php echo $data->id_kegiatan;?>">
 										</div>
 									</div>
 							</div>

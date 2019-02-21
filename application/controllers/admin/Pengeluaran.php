@@ -26,7 +26,7 @@ class Pengeluaran extends CI_Controller{
         $tempat = $this->input->post("xtempat");
         $this->m_saldo->simpan_saldo_pengeluaran($jumlahpengeluaran);
         $this->m_pengeluaran->simpan_pengeluaran($namapengeluaran, $jumlahpengeluaran, $tempat);
-        redirect("admin/pengeluaran");
+        redirect("admin/pengeluaran/tampil_pengeluaran");
     }
 
     function tampil_pengeluaran(){

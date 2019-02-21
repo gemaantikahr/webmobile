@@ -36,7 +36,7 @@ class Pemasukan extends CI_Controller{
 		$keterangan = $this->input->post("xketerangan");
 		$this->m_saldo->simpan_saldo_pemasukan($jumlahpemasukan);
         $this->m_pemasukan->simpan_pemasukan($namapemasukan, $jumlahpemasukan, $keterangan);
-        redirect("admin/pengeluaran");
+        redirect("admin/pemasukan/tampil_pemasukan");
 	}
 
 }

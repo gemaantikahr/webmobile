@@ -17,7 +17,7 @@ class Home extends CI_Controller{
         $data['hari']=$this->m_perkuliahan->tampil_perkuliahan();
         $data['jadwal']=$this->m_perkuliahan->tampil_jadwal();
         
-        $this->load->view("depan/home", $data);
+        $this->load->view("depan/perkuliahan/v_jadwal_kuliah", $data);
     }
 
 }
