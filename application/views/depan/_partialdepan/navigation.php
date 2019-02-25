@@ -24,6 +24,18 @@
             <a class="dropdown-item" href="<?php echo site_url('admin/pengeluaran/tampil_pengeluaran')?>">Transaksi Keluar</a>
           </div>
       </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Situs
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://portal.uad.ac.id/">PORTAL</a>
+            <a class="dropdown-item" href="https://tif.uad.ac.id/">TIF</a>
+            <a class="dropdown-item" href="https://hm.tif.uad.ac.id/">HMTIF</a>
+            <a class="dropdown-item" href="https://bimawa.uad.ac.id/">BIMAWA</a>
+            <a class="dropdown-item" href="https://simeru.uad.ac.id/">SIMERU</a>
+          </div>
+      </li>
       <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('admin')?>">Admin</a>
       </li>    

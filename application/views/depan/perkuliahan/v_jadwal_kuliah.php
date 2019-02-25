@@ -47,24 +47,26 @@
           <?php endif?>
           <!-- untuk praktikum -->
         <?php endforeach ?>
-        <?php if($data->nama_hari==$key->haripraktikum):?>
+        <?php foreach($jadwalpraktikum as $kunci):?>
+        <?php if($data->nama_hari==$kunci->hari):?>
           <hr>
           <center><div class="row container">
           <button type="button" class="btn btn-danger text-white btn-sm col-2"><i class="fas fa-fw fa-book"></i></button>
           <button type="button" class="btn btn-white btn-sm col-1"></i></button>
-          <button type="button" class="btn btn-outline-secondary bg-danger text-white btn-sm col-9"><?php echo $key->nama_praktikum?></button>
+          <button type="button" class="btn btn-outline-secondary bg-danger text-white btn-sm col-9"><?php echo $kunci->nama_praktikum?></button>
           </div></center>
           <center><div class="row container">
           <button type="button" class="btn btn-warning text-white btn-sm col-2"><i class="fas fa-fw fa-clock"></i></button>
           <button type="button" class="btn btn-white btn-sm col-1"></i></button>
-          <button type="button" class="btn btn-outline-secondary btn-sm col-9"><?php echo $key->mulaipraktikum."-".$key->selesaipraktikum?></button>
+          <button type="button" class="btn btn-outline-secondary btn-sm col-9"><?php echo $kunci->jam_mulai."-".$kunci->jam_selesai?></button>
           </div></center>
           <center><div class="row container">
           <button type="button" class="btn btn-info btn-sm col-2"><i class="fas fa-place-of-worship"></i></button>
           <button type="button" class="btn btn-white btn-sm col-1"></i></button>
-          <button type="button" class="btn btn-outline-secondary btn-sm col-9"><?php echo $key->tempatpraktikum?></button>
+          <button type="button" class="btn btn-outline-secondary btn-sm col-9"><?php echo $kunci->tempat?></button>
           </div></center>
           <?php endif?>
+          <?php endforeach?>
     </div>
     <?php endforeach?>
     

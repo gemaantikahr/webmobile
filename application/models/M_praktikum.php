@@ -28,6 +28,12 @@ class M_praktikum extends CI_Model{
         return $query;
     }
 
+    function tampil_jadwal_praktikum(){
+        $query = $this->db->query("SELECT tbl_praktikum.nama_praktikum, tbl_praktikum.hari, tbl_praktikum.jam_mulai, tbl_praktikum.jam_selesai, tbl_praktikum.tempat FROM tbl_praktikum, tbl_hari
+        WHERE tbl_praktikum.hari = tbl_hari.nama_hari GROUP BY tbl_praktikum.nama_praktikum");
+        return $query->result();
+    }
+
     // public function delete_matakuliah($where){
     //     $query = $this->db->query("DELETE FROM tbl_matakuliah WHERE id_matkul='$where'");
     //     return $query;

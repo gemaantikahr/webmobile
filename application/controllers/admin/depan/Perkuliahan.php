@@ -8,6 +8,7 @@ class Perkuliahan extends CI_Controller{
         $this->load->model('m_perkuliahan');
         $this->load->model('m_tugas');
         $this->load->model('m_kegiatan');
+        $this->load->model('m_praktikum');
 		$this->load->library('form_validation');
 	}
 
@@ -20,6 +21,7 @@ class Perkuliahan extends CI_Controller{
     function tampil_jadwal_kuliah(){
         $data['hari']=$this->m_perkuliahan->tampil_perkuliahan();
         $data['jadwal']=$this->m_perkuliahan->tampil_jadwal();
+        $data['jadwalpraktikum']=$this->m_praktikum->tampil_jadwal_praktikum();
         $this->load->view("depan/perkuliahan/v_jadwal_kuliah", $data);
     }
 

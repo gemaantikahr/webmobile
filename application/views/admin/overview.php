@@ -32,7 +32,7 @@
 							<i class="fas fa-coins"></i>
 						</div>
 						<div class="mr-12">
-							<a class="text-white" href="<?php echo site_url('admin/home/')?>">
+							<a class="text-white" href="<?php echo site_url('admin/depan/perkuliahan/tampil_jadwal_kuliah')?>">
 								<span class="float-left">HOME</span>
 								<span class="float-right">
 									<i class="fas fa-angle-right"></i>
