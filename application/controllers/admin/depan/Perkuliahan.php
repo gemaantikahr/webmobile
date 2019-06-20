@@ -8,6 +8,7 @@ class Perkuliahan extends CI_Controller{
         $this->load->model('m_perkuliahan');
         $this->load->model('m_tugas');
         $this->load->model('m_kegiatan');
+        $this->load->model('m_matakuliah');
         $this->load->model('m_praktikum');
 		$this->load->library('form_validation');
 	}

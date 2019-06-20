@@ -61,5 +61,9 @@ class Matakuliah extends CI_Controller{
 		redirect('admin/perkuliahan/matakuliah');
 	}
 
+	function lihat_presensi(){
+		$this->load->view("depan/perkuliahan/v_presensi");
+	}
+
 
 }
